@@ -1,6 +1,8 @@
+import * as styles from './appButton.module.css'
+
 const appButton = ({buttonColor, buttonText, carsLink}) => {
     return (
-        <button onClick={(e) => {e.preventDefault(); window.location.href=`${carsLink}`}} style={{backgroundColor: `${buttonColor}`}}>{buttonText}</button>
+        <button className={styles.appButton} onClick={(e) => {e.preventDefault(); window.location.href=`${carsLink}`}} style={{backgroundColor: `${buttonColor}`}}>{buttonText}</button>
     )
 }
 

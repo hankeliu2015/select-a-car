@@ -1,0 +1,8 @@
+.redirectButton {
+  text-transform: uppercase;
+  border-radius: 15px;
+  height: 2rem;
+  width: 6rem;
+  border: solid black 2px;
+  margin-bottom: 1rem;
+}

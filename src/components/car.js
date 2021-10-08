@@ -1,4 +1,4 @@
-import AppButton from './appButton'
+import RedirectButton from './redirectButton'
 
 const car = (carsLink) => {
     return (
@@ -7,8 +7,8 @@ const car = (carsLink) => {
             <p>You want to leave the site to see the (black) car?</p>
             <img src={"images/blackCar.png"} style={{height: "150px", width: "150px"}} />
             <div>
-                <AppButton  carsLink={carsLink} buttonColor="white" buttonText="YES" />
-                <AppButton  buttonColor="white" buttonText="No" />
+                <RedirectButton  carsLink={carsLink} buttonColor="white" buttonText="YES" />
+                <RedirectButton  buttonColor="white" buttonText="No" />
             </div>
             <p>*Please remember to wear your seatbelt</p>
         </div>
