@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import SelectCarButtons from './components/carButtons'
+import SelectedCar from './components/car'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
           Please select a car color.
         </h3>
         <SelectCarButtons />
+        <SelectedCar />
       </header>
     </div>
   );
