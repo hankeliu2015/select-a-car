@@ -1,6 +1,6 @@
-const appButton = ({buttonColor, buttonText}) => {
+const appButton = ({buttonColor, buttonText, carsLink}) => {
     return (
-        <button style={{backgroundColor: `${buttonColor}`}}>{buttonText}</button>
+        <button onClick={(e) => {e.preventDefault(); window.location.href=`${carsLink}`}} style={{backgroundColor: `${buttonColor}`}}>{buttonText}</button>
     )
 }
 
