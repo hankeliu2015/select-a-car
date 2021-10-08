@@ -1,0 +1,18 @@
+.carContainer {
+  border: solid #0abde3 10px;
+  border-radius: 2rem;
+  margin: 0.5rem;
+}
+
+.carButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
