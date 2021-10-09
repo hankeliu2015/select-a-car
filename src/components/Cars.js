@@ -26,7 +26,7 @@ export default function Cars() {
                 setShowCar(true)
                 }} 
             className={styles.blueButton} style={{backgroundColor: 'blue'}}>BLUE</button>
-            <ColorSelectedCars carColor={selectedColor} showCar={showCar} />
+            <ColorSelectedCars carColor={selectedColor} showCar={showCar} onClose={() => {setShowCar(false)}} />
         </div>
     )
 }
