@@ -1,0 +1,49 @@
+.showContainer {
+  display: block;
+}
+
+.noShowConstainer {
+  display: none;
+}
+
+.backDrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: grey;
+  z-index: 11;
+}
+
+.Container {
+  width: 50%;
+  left: 50%;
+  transform: translate(50%, 25%);
+  border: solid #0abde3 10px;
+  border-radius: 2rem;
+  margin: 0.5rem;
+}
+
+.carButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+@media (max-width: 375px) {
+  .carButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
