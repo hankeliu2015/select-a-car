@@ -1,3 +1,4 @@
+// this component is not needed anymore
 import * as styles from './appButton.module.css'
 
 const appButton = ({buttonColor, buttonText, carsLink}) => {

@@ -1,10 +1,25 @@
-.noDisplay {
+.showContainer {
+  display: block;
+}
+
+.noShowConstainer {
   display: none;
 }
 
-.showContainer {
+.backDrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 100vh;
-  width: 95vw;
+  background-color: grey;
+  z-index: 11;
+}
+
+.Container {
+  width: 50%;
+  left: 50%;
+  transform: translate(50%, 50%);
   border: solid #0abde3 10px;
   border-radius: 2rem;
   margin: 0.5rem;
