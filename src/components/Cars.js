@@ -5,8 +5,7 @@ import * as styles from './cars.module.css'
 export default function Cars() {
     const [selectedColor, setSelectedColor] = React.useState("none")
     const [showCar, setShowCar] = React.useState(false)
-    // console.log(selectedColor)
-    // console.log(showCar)
+
     return (
         <div className={styles.buttonContainer}>
             <button 
