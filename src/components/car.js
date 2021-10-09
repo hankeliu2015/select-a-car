@@ -17,10 +17,11 @@ const car = ({onClose,carColor, showCar}) => {
                 <h3>ARE YOU SURE? </h3>
                 <p>You want to leave the site to see the {carColor} car?</p>
                 <div className={styles.carButtonsContainer}>
-                    <img src={"images/blackCar.png"} style={{height: "150px", width: "150px"}} />
+                    <img src={"images/blackCar.png"} style={{height: "150px", width: "150px"}} alt="illustrated black car logo"/>
                     <div className={styles.buttons}>
-                        <RedirectButton  carsLink={carsLink} buttonColor="white" buttonText="YES" />
-                        <button className={styles.closeButton} onClick={onClose}>No</button>
+                        <RedirectButton  carsLink={carsLink} buttonColor="white" buttonText="YES"  onClickRedirect={(e) => {e.preventDefault(); window.location.href=`${carsLink}`} }/>
+
+                        <RedirectButton  buttonColor="white" buttonText="NO" onClickRedirect={onClose}/>
                     </div>
                 </div>
                 <p>*Please remember to wear your seatbelt</p>
