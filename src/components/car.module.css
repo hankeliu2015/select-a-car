@@ -1,4 +1,10 @@
-.carContainer {
+.noDisplay {
+  display: none;
+}
+
+.showContainer {
+  height: 100vh;
+  width: 95vw;
   border: solid #0abde3 10px;
   border-radius: 2rem;
   margin: 0.5rem;

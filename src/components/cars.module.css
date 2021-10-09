@@ -1,0 +1,24 @@
+.buttonContainer > button {
+  border-radius: 15px;
+  height: 2rem;
+  width: 6rem;
+  color: white;
+  border: 4px;
+  margin-right: 0.5rem;
+}
+
+.blackButton:hover {
+  color: black;
+  background-color: white !important;
+  border: solid black 4px;
+}
+.redButton:hover {
+  color: red;
+  background-color: white !important;
+  border: solid red 4px;
+}
+.blueButton:hover {
+  color: blue;
+  background-color: white !important;
+  border: solid blue 4px;
+}
