@@ -1,16 +1,19 @@
 import RedirectButton from './redirectButton'
 import * as styles from './car.module.css'
+import { carsLinkByColor } from './carsLinksByColor'
 
 const car = ({onClose,carColor, showCar}) => {
     const showHideClass = showCar ? styles.showContainer : styles.noShowConstainer
+    
     let carsLink= '';
     if(carColor === "black") {
-        carsLink = "https://duckduckgo.com/?q=black+car&t=brave&iax=images&ia=images"
+        carsLink = carsLinkByColor.black
     } else if (carColor === "red") {
-        carsLink = "https://duckduckgo.com/?q=Red+car&t=brave&iar=images&iax=images&ia=images"
+        carsLink = carsLinkByColor.red
     } else if (carColor === "blue") {
-        carsLink = "https://duckduckgo.com/?q=Blue+Car&t=brave&iar=images&iax=images&ia=images"
+        carsLink = carsLinkByColor.blue
     }
+
     return (
         <div className={`${styles.backDrop} ${showHideClass}` }>
             <div className={styles.Container}> 
