@@ -11,7 +11,7 @@ const car = ({carsLink, carColor, showCar}) => {
         <div className={`${styles.backDrop} ${showHideClass}` }>
             <div className={styles.Container}> 
                 <h3>ARE YOU SURE? </h3>
-                <p>You want to leave the site to see the (carColor vairable) car?</p>
+                <p>You want to leave the site to see the {carColor} car?</p>
                 <div className={styles.carButtons}>
                     <img src={"images/blackCar.png"} style={{height: "150px", width: "150px"}} />
                     <div className={styles.buttons}>
