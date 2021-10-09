@@ -13,6 +13,9 @@
   }
 }
 
+.App {
+  border: solid 4px black;
+}
 .App-header {
   background-color: white;
   min-height: 100vh;
