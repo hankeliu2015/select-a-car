@@ -11,9 +11,7 @@ const car = ({carColor, showCar}) => {
     } else if (carColor === "blue") {
         carsLink = "https://duckduckgo.com/?q=Blue+Car&t=brave&iar=images&iax=images&ia=images"
     }
-    // console.log(carColor, showCar)
-    // will set a condition to have the correct carsLink value base on carColor
-    // the following cardLink value in redirectButton is just for testing purpose
+
     return (
         <div className={`${styles.backDrop} ${showHideClass}` }>
             <div className={styles.Container}> 
