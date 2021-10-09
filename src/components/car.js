@@ -5,13 +5,13 @@ import { carsLinkByColor } from './carsLinksByColor'
 const car = ({onClose,carColor, showCar}) => {
     const showHideClass = showCar ? styles.showContainer : styles.noShowConstainer
     
-    let carsLink= '';
+    let currentCarsLink= '';
     if(carColor === "black") {
-        carsLink = carsLinkByColor.black
+        currentCarsLink = carsLinkByColor.black
     } else if (carColor === "red") {
-        carsLink = carsLinkByColor.red
+        currentCarsLink = carsLinkByColor.red
     } else if (carColor === "blue") {
-        carsLink = carsLinkByColor.blue
+        currentCarsLink = carsLinkByColor.blue
     }
 
     return (
@@ -22,7 +22,7 @@ const car = ({onClose,carColor, showCar}) => {
                 <div className={styles.carButtonsContainer}>
                     <img src={"images/blackCar.png"} style={{height: "150px", width: "150px"}} alt="illustrated black car logo"/>
                     <div className={styles.buttons}>
-                        <RedirectButton  carsLink={carsLink} buttonColor="white" buttonText="YES"  onClickRedirect={(e) => {e.preventDefault(); window.location.href=`${carsLink}`} }/>
+                        <RedirectButton buttonColor="white" buttonText="YES"  onClickRedirect={(e) => {e.preventDefault(); window.location.href=`${currentCarsLink}`} }/>
 
                         <RedirectButton  buttonColor="white" buttonText="NO" onClickRedirect={onClose}/>
                     </div>
