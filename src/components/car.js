@@ -20,7 +20,7 @@ const car = ({onClose,carColor, showCar}) => {
                 <h3>ARE YOU SURE? </h3>
                 <p>You want to leave the site to see the {carColor} car?</p>
                 <div className={styles.carRedirectButtonsContainer}>
-                    <img src={"images/blackCar.png"} style={{height: "150px", width: "150px"}} alt="illustrated black car logo"/>
+                    <img src={"images/blackCar.svg"} style={{height: "150px", width: "150px"}} alt="illustrated black car logo"/>
                     <div className={styles.redirectButtonsContainer}>
                         <RedirectButton buttonColor="white" buttonText="YES"  onClickRedirect={(e) => {e.preventDefault(); window.location.href=`${currentCarsLink}`} }/>
                         <RedirectButton  buttonColor="white" buttonText="NO" onClickRedirect={onClose}/>
