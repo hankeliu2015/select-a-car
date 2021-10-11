@@ -1,6 +1,8 @@
 import RedirectButton from './redirectButton'
 import * as styles from './car.module.css'
 import { carsLinkByColor } from './carsLinksByColor'
+import {ReactComponent as CarLogo} from './blackCar.svg'
+import CarLogo2 from './carLogo'
 
 const car = ({onClose,carColor, showCar}) => {
     const showHideClass = showCar ? styles.showContainer : styles.noShowConstainer
@@ -20,7 +22,7 @@ const car = ({onClose,carColor, showCar}) => {
                 <h3>ARE YOU SURE? </h3>
                 <p>You want to leave the site to see the {carColor} car?</p>
                 <div className={styles.carRedirectButtonsContainer}>
-                    <img src={"images/blackCar.png"} style={{height: "150px", width: "150px"}} alt="illustrated black car logo"/>
+                    <CarLogo2 fill={carColor} width={150} height={150}/>
                     <div className={styles.redirectButtonsContainer}>
                         <RedirectButton buttonColor="white" buttonText="YES"  onClickRedirect={(e) => {e.preventDefault(); window.location.href=`${currentCarsLink}`} }/>
                         <RedirectButton  buttonColor="white" buttonText="NO" onClickRedirect={onClose}/>
