@@ -23,7 +23,7 @@
   border: solid blue 4px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 500px) {
   .buttonContainer {
     display: flex;
     flex-direction: column;
