@@ -6,15 +6,6 @@ import CarLogo2 from './carLogo'
 
 const car = ({onClose,carColor, showCar}) => {
     const showHideClass = showCar ? styles.showContainer : styles.noShowConstainer
-    
-    let currentCarsLink= '';
-    if(carColor === "black") {
-        currentCarsLink = carsLinkByColor.black
-    } else if (carColor === "red") {
-        currentCarsLink = carsLinkByColor.red
-    } else if (carColor === "blue") {
-        currentCarsLink = carsLinkByColor.blue
-    }
 
     return (
         <div className={`${styles.backDrop} ${showHideClass}` }>
@@ -24,7 +15,7 @@ const car = ({onClose,carColor, showCar}) => {
                 <div className={styles.carRedirectButtonsContainer}>
                     <CarLogo2 fill={carColor} width={150} height={150}/>
                     <div className={styles.redirectButtonsContainer}>
-                        <RedirectButton buttonColor="white" buttonText="YES"  onClickRedirect={(e) => {e.preventDefault(); window.location.href=`${currentCarsLink}`} }/>
+                        <RedirectButton buttonColor="white" buttonText="YES"  onClickRedirect={(e) => {e.preventDefault(); window.location.href=`${carsLinkByColor[carColor]}`} }/>
                         <RedirectButton  buttonColor="white" buttonText="NO" onClickRedirect={onClose}/>
                     </div>
                 </div>

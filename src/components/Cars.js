@@ -5,20 +5,24 @@ import * as styles from './cars.module.css'
 export default function Cars() {
     const [selectedColor, setSelectedColor] = React.useState("none")
     const [showCar, setShowCar] = React.useState(false)
-
+    const selectCarColor = (color, showCar=true) => {
+        setSelectedColor(color) 
+        setShowCar(showCar)
+    }
     return (
         <div className={styles.buttonContainer}>
             <button 
                 onClick={()=> {
-                setSelectedColor("black") 
-                setShowCar(true)
-                }} 
+                    setSelectedColor("black") 
+                    setShowCar(true)
+                    }
+                } 
                 className={styles.blackButton} style={{backgroundColor: 'black'}}>Black</button>
             <button 
                 onClick={()=> {
-                setSelectedColor("red") 
-                setShowCar(true)
-                }} 
+                    setSelectedColor("red") 
+                    setShowCar(true)
+                    }} 
             className={styles.redButton} style={{backgroundColor: 'red'}}>RED</button>
             <button 
                 onClick={()=> {
