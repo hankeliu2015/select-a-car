@@ -5,31 +5,28 @@ import * as styles from './cars.module.css'
 export default function Cars() {
     const [selectedColor, setSelectedColor] = React.useState("none")
     const [showCar, setShowCar] = React.useState(false)
-    const selectCarColor = (color, showCar=true) => {
-        setSelectedColor(color) 
-        setShowCar(showCar)
+    const buttonRef = React.useRef(null)
+
+    const selectCarColor = () => {
+        setSelectedColor(buttonRef.current.textContent.toLowerCase()) 
+        setShowCar(true)
     }
+
     return (
         <div className={styles.buttonContainer}>
             <button 
-                onClick={()=> {
-                    setSelectedColor("black") 
-                    setShowCar(true)
-                    }
-                } 
-                className={styles.blackButton} style={{backgroundColor: 'black'}}>Black</button>
+                ref={buttonRef}
+                onClick={selectCarColor} 
+                className={styles.blackButton} style={{backgroundColor: 'black'}}>Black
+            </button>
             <button 
-                onClick={()=> {
-                    setSelectedColor("red") 
-                    setShowCar(true)
-                    }} 
-            className={styles.redButton} style={{backgroundColor: 'red'}}>RED</button>
+                ref={buttonRef}
+                onClick={selectCarColor}
+                className={styles.redButton} style={{backgroundColor: 'red'}}>RED</button>
             <button 
-                onClick={()=> {
-                setSelectedColor("blue") 
-                setShowCar(true)
-                }} 
-            className={styles.blueButton} style={{backgroundColor: 'blue'}}>BLUE</button>
+                ref={buttonRef}
+                onClick={selectCarColor}
+                className={styles.blueButton} style={{backgroundColor: 'blue'}}>BLUE</button>
             <ColorSelectedCars carColor={selectedColor} showCar={showCar} onClose={() => {setShowCar(false)}} />
         </div>
     )
