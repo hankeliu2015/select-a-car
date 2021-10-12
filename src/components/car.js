@@ -1,7 +1,6 @@
 import RedirectButton from './redirectButton'
 import * as styles from './car.module.css'
 import { carsLinkByColor } from './carsLinksByColor'
-import {ReactComponent as CarLogo} from './blackCar.svg'
 import CarLogo2 from './carLogo'
 
 const car = ({onClose,carColor, showCar}) => {
