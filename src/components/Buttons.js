@@ -1,8 +1,8 @@
 import React from 'react'
 import ColorSelectedCars from './car'
-import * as styles from './cars.module.css'
+import * as styles from './buttons.module.css'
 
-export default function Cars() {
+function ColorSelectButton (buttonColor) {
     const [selectedColor, setSelectedColor] = React.useState("none")
     const [showCar, setShowCar] = React.useState(false)
     const buttonRef = React.useRef(null)
@@ -12,7 +12,6 @@ export default function Cars() {
         setShowCar(true)
     }
 
-    const colorSelectButtons = {blackButton: 'black', redButton: 'red', blueButton: 'blue'}
     const colorButtonStyle = {
         borderRadius: '15px',
         height: '2rem',
@@ -20,8 +19,26 @@ export default function Cars() {
         color: 'white',
         border: '4px',
         margin: '0.25rem', 
-        backgroundColor:` ${colorSelectButtons.blackButton}`,
-        border: `solid ${colorSelectButtons.blackButton} 4px`
+        backgroundColor:` ${buttonColor}`,
+        border: `solid ${buttonColor} 4px`
+    }
+
+    return (
+        <button
+            ref={buttonRef}
+            onClick={selectCarColor} 
+            className={styles.blackButton} style={colorButtonStyle}>Black
+        </button>
+    )
+}
+export default function Buttons() {
+    const [selectedColor, setSelectedColor] = React.useState("none")
+    const [showCar, setShowCar] = React.useState(false)
+    const buttonRef = React.useRef(null)
+
+    const selectCarColor = () => {
+        setSelectedColor(buttonRef.current.textContent.toLowerCase()) 
+        setShowCar(true)
     }
 
     return (
@@ -29,7 +46,7 @@ export default function Cars() {
             <button 
                 ref={buttonRef}
                 onClick={selectCarColor} 
-                className={styles.blackButton} style={colorButtonStyle}>Black
+                className={styles.blackButton} style={{backgroundColor: 'black'}}>Black
             </button>
             <button 
                 ref={buttonRef}
