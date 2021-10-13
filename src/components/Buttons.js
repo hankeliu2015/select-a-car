@@ -1,5 +1,5 @@
 import React from 'react'
-import ColorSelectedCars from './car'
+import PopupWindow from './popupWindow'
 import * as styles from './buttons.module.css'
 
 function ColorSelectButton (buttonColor) {
@@ -56,7 +56,7 @@ export default function Buttons() {
                 ref={buttonRef}
                 onClick={selectCarColor}
                 className={styles.blueButton} style={{backgroundColor: 'blue'}}>BLUE</button>
-            <ColorSelectedCars carColor={selectedColor} showCar={showCar} onClose={() => {setShowCar(false)}} />
+            <PopupWindow carColor={selectedColor} showCar={showCar} onClose={() => {setShowCar(false)}} />
         </div>
     )
 }
