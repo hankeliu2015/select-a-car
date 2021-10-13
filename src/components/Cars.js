@@ -12,12 +12,24 @@ export default function Cars() {
         setShowCar(true)
     }
 
+    const colorSelectButtons = {blackButton: 'black', redButton: 'red', blueButton: 'blue'}
+    const colorButtonStyle = {
+        borderRadius: '15px',
+        height: '2rem',
+        width: '6rem',
+        color: 'white',
+        border: '4px',
+        margin: '0.25rem', 
+        backgroundColor:` ${colorSelectButtons.blackButton}`,
+        border: `solid ${colorSelectButtons.blackButton} 4px`
+    }
+
     return (
         <div className={styles.buttonContainer}>
             <button 
                 ref={buttonRef}
                 onClick={selectCarColor} 
-                className={styles.blackButton} style={{backgroundColor: 'black'}}>Black
+                className={styles.blackButton} style={colorButtonStyle}>Black
             </button>
             <button 
                 ref={buttonRef}
