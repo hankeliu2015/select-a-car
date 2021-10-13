@@ -13,6 +13,7 @@ const popupWindow = ({onClose,carColor, showCar}) => {
                 <p>You want to leave the site to see the {carColor} car?</p>
                 <div className={styles.carRedirectButtonsContainer}>
                     <CarLogo fill={carColor} width={150} height={150}/>
+                    <img src="images/carLogoBlack.svg"/>
                     <div className={styles.redirectButtonsContainer}>
                         <RedirectButton buttonColor="white" buttonText="YES"  onClickRedirect={(e) => {e.preventDefault(); window.location.href=`${carsLinkByColor[carColor]}`} }/>
                         <RedirectButton  buttonColor="white" buttonText="NO" onClickRedirect={onClose}/>
