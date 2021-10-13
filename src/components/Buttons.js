@@ -2,35 +2,37 @@ import React from 'react'
 import PopupWindow from './popupWindow'
 import * as styles from './buttons.module.css'
 
-function ColorSelectButton (buttonColor) {
-    const [selectedColor, setSelectedColor] = React.useState("none")
-    const [showCar, setShowCar] = React.useState(false)
-    const buttonRef = React.useRef(null)
+////comment out temporarily - wip
+// function ColorSelectButton (buttonColor) {
+//     const [selectedColor, setSelectedColor] = React.useState("none")
+//     const [showCar, setShowCar] = React.useState(false)
+//     const buttonRef = React.useRef(null)
 
-    const selectCarColor = () => {
-        setSelectedColor(buttonRef.current.textContent.toLowerCase()) 
-        setShowCar(true)
-    }
+//     const selectCarColor = () => {
+//         setSelectedColor(buttonRef.current.textContent.toLowerCase()) 
+//         setShowCar(true)
+//     }
 
-    const colorButtonStyle = {
-        borderRadius: '15px',
-        height: '2rem',
-        width: '6rem',
-        color: 'white',
-        border: '4px',
-        margin: '0.25rem', 
-        backgroundColor:` ${buttonColor}`,
-        border: `solid ${buttonColor} 4px`
-    }
+//     const colorButtonStyle = {
+//         borderRadius: '15px',
+//         height: '2rem',
+//         width: '6rem',
+//         color: 'white',
+//         border: '4px',
+//         margin: '0.25rem', 
+//         backgroundColor:` ${buttonColor}`,
+//         border: `solid ${buttonColor} 4px`
+//     }
 
-    return (
-        <button
-            ref={buttonRef}
-            onClick={selectCarColor} 
-            className={styles.blackButton} style={colorButtonStyle}>Black
-        </button>
-    )
-}
+//     return (
+//         <button
+//             ref={buttonRef}
+//             onClick={selectCarColor} 
+//             className={styles.blackButton} style={colorButtonStyle}>Black
+//         </button>
+//     )
+// }
+
 export default function Buttons() {
     const [selectedColor, setSelectedColor] = React.useState("none")
     const [showCar, setShowCar] = React.useState(false)
