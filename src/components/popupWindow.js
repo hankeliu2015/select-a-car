@@ -1,9 +1,9 @@
 import RedirectButton from './redirectButton'
-import * as styles from './car.module.css'
+import * as styles from './popupWindow.module.css'
 import { carsLinkByColor } from './carsLinksByColor'
 import CarLogo2 from './carLogo'
 
-const car = ({onClose,carColor, showCar}) => {
+const popupWindow = ({onClose,carColor, showCar}) => {
     const showHideClass = showCar ? styles.showContainer : styles.noShowConstainer
 
     return (
@@ -24,4 +24,4 @@ const car = ({onClose,carColor, showCar}) => {
     )
 }
 
-export default car;
+export default popupWindow;

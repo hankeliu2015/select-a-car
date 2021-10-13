@@ -1,5 +1,5 @@
 import './App.css';
-import Cars from './components/Cars'
+import Buttons from './components/Buttons'
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
         <h3>
           Please select a car color.
         </h3>
-        <Cars />
+        <Buttons />
         
       </header>
     </div>
