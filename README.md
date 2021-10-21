@@ -1,5 +1,5 @@
 site is alive at <https://angry-hugle-fb7c80.netlify.app/>.
-In the middle of testing using inline CSS style to control Popup car color. The color is set to blue for now.
+In the middle of testing using inline CSS style to control Popup car color. The blue car svg file is just a palce holder for now.
 
 # Getting Started with Create React App
 
