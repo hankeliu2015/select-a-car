@@ -1,3 +1,6 @@
+site is alive at <https://angry-hugle-fb7c80.netlify.app/>.
+In the middle of testing using inline CSS style to control Popup car color. The color is set to blue for now.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
